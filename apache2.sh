@@ -1,4 +1,5 @@
-sudo su -
+#!/bin/bash
+sudo - i
 sudo apt install apache2
 sudo systemctl start apache2
 sudo systemctl enable apache2
