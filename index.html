@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechShop - Mobile & Laptop Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Header */
+header {
+    background: #111;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: #00bcd4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Products */
+.products {
+    padding: 40px 5%;
+}
+
+.products h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.price {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card button {
+    padding: 8px 15px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background: #00bcd4;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>TechShop</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Laptops</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Best Deals on Mobiles & Laptops</h2>
+    <p>Discover latest smartphones and powerful laptops at unbeatable prices.</p>
+    <button>Shop Now</button>
+</section>
+
+<section class="products">
+    <h2>Featured Mobiles</h2>
+    <div class="product-grid">
+
+```
+    <div class="card">
+        <img src="https://via.placeholder.com/200x180" alt="Mobile">
+        <h3>iPhone 15</h3>
+        <p class="price">$999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200x180" alt="Mobile">
+        <h3>Samsung Galaxy S24</h3>
+        <p class="price">$899</p>
+        <button>Add to Cart</button>
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="products">
+    <h2>Featured Laptops</h2>
+    <div class="product-grid">
+
+```
+    <div class="card">
+        <img src="https://via.placeholder.com/200x180" alt="Laptop">
+        <h3>MacBook Pro</h3>
+        <p class="price">$1499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200x180" alt="Laptop">
+        <h3>Dell XPS 15</h3>
+        <p class="price">$1299</p>
+        <button>Add to Cart</button>
+    </div>
+
+</div>
+```
+
+</section>
+
+<footer>
+    <p>© 2026 TechShop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
