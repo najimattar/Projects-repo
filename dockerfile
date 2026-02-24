@@ -1,5 +1,6 @@
-From ubuntu:latest
+FROM ubuntu:latest
 RUN apt update && apt install nginx -y
-COPY ./Project-repo/index.html /var/www/html/index.html
-EXPOSE 8080
+COPY index.html /var/www/html/index.html
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+WORKDIR /var/www/html
