@@ -4,6 +4,6 @@ resource "aws_instance" "test_instance" {
     key_name = var.key_name
     security_groups = [var.Security_Group_ids]
     tags = {
-        name = test
+        name = "test"
     }
 }
