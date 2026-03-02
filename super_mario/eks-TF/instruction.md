@@ -1,6 +1,8 @@
 1. Update system:
     sudo apt update -y
 
+Check profile : cat ~/.aws/credentials
+
 2. Add HashiCorp GPG key:
     curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 

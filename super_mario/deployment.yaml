@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: mario-container
-          image: mukunddev0325/super-mario
+          image: najimattar/nginx:web
           ports:
             - containerPort: 80
