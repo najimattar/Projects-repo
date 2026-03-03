@@ -70,6 +70,15 @@ ansible-galaxy role init myrole
   notify: Restart Nginx
 ```
 
+- roles/myrole/handlers/main.yml
+```
+---
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted
+```
+
 - roles/myrole/templates/index.html.j2
 ```
 <html>
