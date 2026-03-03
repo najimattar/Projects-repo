@@ -2,7 +2,8 @@
 - Step 1: Download Prometheus
 ```
 cd /opt
-sudo wget https://github.com/prometheus/prometheus/releases/latest/download/prometheus-2.52.0.linux-amd64.tar.gz
+sudo wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
+
 ```
 - Step 2: Extract
 ```
@@ -22,18 +23,21 @@ sudo vi /opt/prometheus/prometheus.yml
 ```
 
 ```
-globle:
-    scrape_interval: 5s
+global:
+  scrape_interval: 5s
 
 scrape_configs:
   - job_name: "prometheus"
     static_configs:
-      - targets: ["localhost:9090"]
+      - targets:
+          - "localhost:9090"
 
-scrape_configs:
   - job_name: "node_exporter"
     static_configs:
-      - targets: ["localhost:9100"]
+      - targets:
+          - "worker_node1_public_ip:9100"
+          - "worker_node2_public_ip:9100"
+
 ```
 - Step 5: Create Service File
 ```
@@ -61,7 +65,8 @@ WantedBy=multi-user.target
 ```
 sudo mkdir /opt/prometheus/data
 sudo chown -R prometheus:prometheus /opt/prometheus/data
-
+```
+```
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
