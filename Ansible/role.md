@@ -1,3 +1,5 @@
+# path : cd /etc/ansible/
+
 #### Project Structure
 
 ```
@@ -38,7 +40,11 @@ ansible-nginx/
     - myrole
 ```
 
-## 3. Role: myrole
+## 3. create Role: myrole
+```
+cd /etc/ansible/roles
+ansible-galaxy role init myrole
+```
 - roles/myrole/tasks/main.yml
 ```
 ---
