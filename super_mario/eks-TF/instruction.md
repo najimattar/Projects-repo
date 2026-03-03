@@ -39,5 +39,5 @@ kubectl get nodes
 
 ### 9. VERY IMPORTANT (To Stop Billing)
   ```
-  terraform destroy
+  terraform destroy -auto-approve
 ```
