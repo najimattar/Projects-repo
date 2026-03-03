@@ -26,16 +26,35 @@ sudo apt-get update
 
 ## 3.To install Grafana OSS, run the following command:
 ```
-sudo apt-get install grafana
+sudo apt-get install grafana -y
 ```
 
 ## 4.To install Grafana Enterprise, run the following command:
 ```
-sudo apt-get install grafana-enterprise
+sudo apt-get install grafana-enterprise -y
 ```
 ## start service
 ```
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
 sudo systemctl status grafana-server
+```
+
+## 5. Connect Grafana to Prometheus:
+- Go to: http://YOUR_SERVER_IP:3000
+- connections → Data Sources
+- Add Data Source
+- Select Prometheus
+- URL: 
+```
+http://localhost:9090
+```
+- Click Save & Test
+
+## 6. Import Node Exporter Dashboard
+- Go to Dashboards
+- Click Import
+- Enter Dashboard ID: 
+```
+1860
 ```
