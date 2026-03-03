@@ -5,6 +5,7 @@
 ### Check profile: 
 ```
 cat ~/.aws/credentials
+aws configure --profile eks
 ```
 ### 2. Add HashiCorp GPG key:
 ```
