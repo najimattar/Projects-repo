@@ -1,7 +1,7 @@
 import boto3
 
 # Create EC2 client
-ec2 = boto3.client('ec2')
+ec2 = boto3.client('ec2', 'ap-south-1')
 
 # Get all instances
 response = ec2.describe_instances()
